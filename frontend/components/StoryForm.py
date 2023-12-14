@@ -1,21 +1,13 @@
 import streamlit as st
 import pandas as pd
-
-def getName(obj):
-    return obj["Name"] 
-
+from components.CharacterAndLocation import SelectData
 
 def StoryForm():
-    characters = st.session_state["Characters"]
-    options = st.multiselect(
-    'Choose Character',
-    characters,format_func=getName
-    )
-    st.write('You selected:', options)
+    with st.form("my_form"):
+        character,location =  SelectData()
+        prompt = st.text_input('Story prompt', placeholder="Write Your Story" )
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            st.write("done",prompt,character,location)
 
-    locations = st.session_state["Locations"]
-    options = st.multiselect(
-    'Choose Location',
-    locations,format_func=getName
-    )
-    st.write('You selected:', options)
+    # st.write('The current movie title is', title)
