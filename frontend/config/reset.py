@@ -1,14 +1,12 @@
 import streamlit as st   
 import pandas as pd 
-def reset():
-    df = [
-       {"Name": "st.selectbox", "Age": 4, "Description": "hello"},
-       {"Name": "st.balloons", "Age": 5, "Description": "hello"},
-       {"Name": "st.time_input", "Age": 3, "Description": "hello"},
-       
-   ]
 
+
+from backend.config.data import get_characters
+from backend.config.data import get_locations
+
+def reset():
     if "Locations" not in st.session_state:
-        st.session_state["Locations"] = df
+        st.session_state["Locations"] = get_locations()
     if "Characters" not in st.session_state:    
-        st.session_state["Characters"] = df
+        st.session_state["Characters"] = get_characters()

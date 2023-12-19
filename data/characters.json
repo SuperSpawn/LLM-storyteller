@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Alice",
+      "description": "A curious young girl who follows a white rabbit down a fantastical hole."
+    },
+    {
+      "name": "Mad Hatter",
+      "description": "A tea-loving inhabitant of Wonderland with nonsensical riddles and pronouncements."
+    },
+    {
+      "name": "Cheshire Cat",
+      "description": "A grinning feline who appears and disappears mysteriously, offering cryptic advice."
+    },
+    {
+      "name": "Queen of Hearts",
+      "description": "A tyrannical ruler, quick to order beheadings for the slightest offense."
+    },
+    {
+      "name": "White Rabbit",
+      "description": "A nervous creature always running late, who leads Alice to Wonderland."
+    }
+  ]
+  
